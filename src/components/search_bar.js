@@ -9,8 +9,15 @@ class SearchBar extends Component {
   // defining a method on the React class
   // every class must have a render function
   render() {
-    return <input />;
+    // create a new element called 'input' and assign the property 'onChange'
+    return <input onChange={this.onInputChange} />;
   }
+
+  // detect the change from input search bar
+  onInputChange(event) {
+    console.log(event.target.value);
+  }
+
 }
 
 // make the SearchBar UI element exportable for other classes
